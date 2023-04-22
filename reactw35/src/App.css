@@ -1,0 +1,44 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+  color: rgba(194, 185, 185, 0.87);
+  margin-top: 2%;
+  margin-left: 1px;
+  width: 25%;
+  height: 55%;
+}
+
+.comments {
+  display: flex;
+  flex-direction: row;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  color: rgba(150, 144, 144, 0.87);
+  margin-top: 2%;
+  margin-left: 50%;
+  width: 5%;
+  height: 55%;
+}
+.user_id {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 10%;
+}
+.form-name {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+  color: rgba(110, 106, 106, 0.87);
+  margin: 5%;
+  margin-left: 1px;
+  width: 50%;
+  height: 35%;
+}
+button {
+  width: 80%;
+}
