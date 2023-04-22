@@ -16,8 +16,7 @@ export default class App extends Component {
       comments: [
         ...this.state.comments,
         {
-          id: this.state.comments.length ? this.state.comments.reduce((p, c) => p.id > c.id ? p : c).id + 1 : 1, // max id +1
-          name: this.state.form.name,
+                    name: this.state.form.name,
           comment: this.state.form.comment
         }
       ],
@@ -25,14 +24,13 @@ export default class App extends Component {
         name: '',
         comment: ''
       }
-    }, () => localStorage.setItem('state', JSON.stringify(this.state)))
+    })
   }
 
   removeComment = (id) => {
     this.setState({
       comments: this.state.comments.filter(comment => comment.id !== id)
-    }, () => localStorage.setItem('state', JSON.stringify(this.state)))
-  }
+    })}
 
   handleChange = (e) => {
     console.log(e.target.name)
@@ -54,7 +52,7 @@ export default class App extends Component {
   height="50" alt="avatar"/></a>
   <span>   {comment.name}</span></div>
           <div className="comments">{comment.comment}</div>
-          <button onClick={this.removeComment.bind(null, comment.id)}>Удалить комментарий</button>
+          <button className="btn_del" onClick={this.removeComment.bind(null, comment.id)}>Удалить комментарий</button>
         </div>)}
         <div className="form-name">
           <label>Имя: <input

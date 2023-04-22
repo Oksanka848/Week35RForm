@@ -18,7 +18,7 @@
   line-height: 1.5rem;
   color: rgba(150, 144, 144, 0.87);
   margin-top: 2%;
-  margin-left: 50%;
+  margin-left: 10%;
   width: 5%;
   height: 55%;
 }
@@ -41,4 +41,9 @@
 }
 button {
   width: 80%;
+}
+.btn_del {
+  width: 40%;
+  margin-left: 50%;
+  font-size: 0.6rem;
 }
