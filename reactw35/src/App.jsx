@@ -11,19 +11,23 @@ export default class App extends Component {
     }
   }
 
-    addComment = () => {
+    addComment = (e) => {
+      e.preventDefault();
     this.setState({
       comments: [
-        ...this.state.comments,
+        
         {
-                    name: this.state.form.name,
+          name: this.state.form.name,
           comment: this.state.form.comment
-        }
+          
+        } ,
+        ...this.state.comments
       ],
       form: {
         name: '',
         comment: ''
       }
+      
     })
   }
 
@@ -33,14 +37,19 @@ export default class App extends Component {
     })}
 
   handleChange = (e) => {
+
     console.log(e.target.name)
+    
     this.setState({
       form: {
         ...this.state.form,
         [e.target.name]: e.target.value,
+        
       }
     })
   }
+
+    
 
   render() {
     return (
