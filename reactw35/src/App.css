@@ -19,9 +19,24 @@
   color: rgba(150, 144, 144, 0.87);
   margin-top: 2%;
   margin-left: 10%;
-  width: 5%;
+  width: 45%;
   height: 55%;
+  
 }
+
+.new_comments {
+  display: flex;
+  flex-direction: row;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  color: rgba(150, 144, 144, 0.87);
+  margin-top: 2%;
+  margin-left: 10%;
+  width: 45%;
+  height: 55%;
+  background-color: rgba(247, 236, 238, 0.79);
+}
+
 .user_id {
   display: inline-block;
   vertical-align: top;
