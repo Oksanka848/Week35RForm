@@ -11,6 +11,13 @@
   height: 55%;
 }
 
+.comment_box {
+  display: flex;
+  flex-direction: column;
+  width: 45em;
+  position: relative;
+}
+
 .comments {
   display: flex;
   flex-direction: row;
@@ -21,7 +28,6 @@
   margin-left: 10%;
   width: 45%;
   height: 55%;
-  
 }
 
 .new_comments {
@@ -32,7 +38,8 @@
   color: rgba(150, 144, 144, 0.87);
   margin-top: 2%;
   margin-left: 10%;
-  width: 45%;
+  width: fit-content;
+  padding: 1%;
   height: 55%;
   background-color: rgba(247, 236, 238, 0.79);
 }
@@ -42,6 +49,7 @@
   vertical-align: top;
   padding-left: 10%;
 }
+
 .form-name {
   display: flex;
   flex-direction: column;
@@ -54,11 +62,17 @@
   width: 50%;
   height: 35%;
 }
+
 button {
-  width: 80%;
-}
-.btn_del {
-  width: 40%;
-  margin-left: 50%;
+  width: fit-content;
   font-size: 0.6rem;
+  font-style: inherit;
+}
+
+.btn_del {
+  width: 15%;
+  margin-top: 1.5%;
+  margin-left: 45%;
+  font-size: 0.6rem;
+  font-style: inherit;
 }
