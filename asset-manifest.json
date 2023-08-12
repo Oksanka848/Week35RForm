@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/reactw35/static/css/main.71df8494.css",
+    "main.js": "/reactw35/static/js/main.3cecff77.js",
+    "index.html": "/reactw35/index.html",
+    "main.71df8494.css.map": "/reactw35/static/css/main.71df8494.css.map",
+    "main.3cecff77.js.map": "/reactw35/static/js/main.3cecff77.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.71df8494.css",
+    "static/js/main.3cecff77.js"
+  ]
+}
