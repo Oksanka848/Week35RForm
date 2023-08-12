@@ -31,7 +31,7 @@ export default class App extends Component {
   }
   removeComment = (id) => {
     this.setState({
-      comments: this.state.comments.filter(comment => comment.id !== id)
+      comments: this.state.comments.filter(comment => comment.id!== id)
     })
   }
   handleChange = (e) => {
@@ -46,17 +46,18 @@ export default class App extends Component {
   render() {
     const { active } = this.state;
     return (
-      <div className="App">
+      <div className="App" >
         {this.state.comments.map((comment, i) => <div key={comment.id} className='comment_box'>
           <ul>
             <li>
               <div>
-          <div className='user_id'>
+              
+          <div className='user_id' >
             <a href="https://pixelbox.ru/wp-content/uploads/2022/06/risovanie-avatars-for-girls-pixelbox.ru-54.jpg"><img src="https://pixelbox.ru/wp-content/uploads/2022/06/risovanie-avatars-for-girls-pixelbox.ru-54.jpg" width="50"
               height="50" alt="avatar" /></a>
             <span>   {comment.name}</span></div>
           <div className={i === active ? 'new_comments' : 'comments'}>{comment.comment}</div>
-          <button className="btn_del" onClick={this.removeComment.bind(null, comment.id)}>Del</button>
+          <button className="btn_del" onClick={this.removeComment.bind(null,comment.id)}>Del</button>
           </div></li></ul> </div> )}
         <div className="form-name">
           <label>Имя: <input
@@ -73,8 +74,5 @@ export default class App extends Component {
         </div>
       </div>
     )
-
-
-
-  }
+}
 }
