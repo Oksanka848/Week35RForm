@@ -29,11 +29,13 @@ export default class App extends Component {
       }
     })
   }
-  removeComment = (id) => {
-    this.setState({
-      comments: this.state.comments.filter(comment => comment.id!== id)
-    })
-  }
+  removeComment = (index) => {
+  const updatedComments = [...this.state.comments];
+  updatedComments.splice(index, 1);
+  this.setState({
+    comments: updatedComments
+  });
+}
   handleChange = (e) => {
     console.log(e.target.name)
     this.setState({
@@ -57,7 +59,7 @@ export default class App extends Component {
               height="50" alt="avatar" /></a>
             <span>   {comment.name}</span></div>
           <div className={i === active ? 'new_comments' : 'comments'}>{comment.comment}</div>
-          <button className="btn_del" onClick={this.removeComment.bind(null,comment.id)}>Del</button>
+          <button className="btn_del" onClick={() => this.removeComment(i)}>Del</button>
           </div></li></ul> </div> )}
         <div className="form-name">
           <label>Имя: <input
